@@ -1,17 +1,19 @@
 return {
-	"folke/tokyonight.nvim",
+	"navarasu/onedark.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("tokyonight").setup({
-			style = "night",
+		require("onedark").setup({
+			style = "darker", -- options: dark, darker, cool, deep, warm, warmer, light
 			transparent = false,
-			terminal_colors = true,
-			styles = {
-				comments = { italic = true },
-				keywords = { italic = true },
+			code_style = {
+				comments = "italic",
+				keywords = "italic",
+				functions = "none",
+				strings = "none",
+				variables = "none",
 			},
 		})
-		vim.cmd.colorscheme("tokyonight-night")
+		require("onedark").load()
 	end,
 }
