@@ -36,4 +36,6 @@ vim.api.nvim_create_user_command('CodiumConfig', 'cd ~/.config/VSCodium', {})
 vim.api.nvim_create_user_command('CodeConfig', 'cd ~/.config/Code', {})
 vim.api.nvim_create_user_command('Projects', 'cd ~/Documents', {})
 
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+
 require("config.lazy")
