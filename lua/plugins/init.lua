@@ -71,7 +71,7 @@ return {
     opts = function()
       local default_opts = require "nvchad.configs.treesitter"
       return vim.tbl_deep_extend("force", default_opts, {
-        ensure_installed = vim.list_extend(default_opts.ensure_installed, { "html", "css" }),
+        ensure_installed = vim.list_extend(default_opts.ensure_installed, { "html", "css", "go" }),
       })
     end,
   },
