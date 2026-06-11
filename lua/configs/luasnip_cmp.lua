@@ -1,14 +1,14 @@
 dofile(vim.g.base46_cache .. "cmp")
 
-local cmp = require("cmp")
-local luasnip = require("luasnip")
+local cmp = require "cmp"
+local luasnip = require "luasnip"
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col > 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+  return col > 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
 
-cmp.setup({
+cmp.setup {
   completion = {
     completeopt = "menu,menuone,noinsert",
   },
@@ -19,7 +19,7 @@ cmp.setup({
     end,
   },
 
-  mapping = cmp.mapping.preset.insert({
+  mapping = cmp.mapping.preset.insert {
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -44,14 +44,14 @@ cmp.setup({
 
     ["<CR>"] = cmp.mapping(function(fallback)
       if cmp.visible() and cmp.get_selected_entry() then
-        cmp.confirm({ select = true })
+        cmp.confirm { select = true }
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
       else
         fallback()
       end
     end, { "i", "s" }),
-  }),
+  },
 
   sources = {
     { name = "nvim_lsp" },
@@ -73,7 +73,7 @@ cmp.setup({
       cmp.config.compare.order,
     },
   },
-})
+}
 
 -- Disable buffer source for HTML-like files to prevent buffer words
 -- from competing with LSP-provided HTML tag completions
@@ -82,12 +82,12 @@ local html_fts = { "html", "htm", "jsx", "tsx", "xml" }
 vim.api.nvim_create_autocmd("FileType", {
   pattern = html_fts,
   callback = function()
-    cmp.setup.buffer({
+    cmp.setup.buffer {
       sources = {
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
       },
-    })
+    }
   end,
 })

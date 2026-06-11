@@ -18,7 +18,7 @@ return {
     main = "ibl",
     event = "BufReadPost",
     config = function()
-        require "configs.blankline"
+      require "configs.blankline"
     end,
   },
 
@@ -28,7 +28,7 @@ return {
     version = "v2.*",
     build = "make install_jsregexp",
     config = function()
-      require("configs.luasnip")
+      require "configs.luasnip"
     end,
   },
   {

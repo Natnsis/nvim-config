@@ -1,9 +1,5 @@
-**This repo is supposed to be used as config by NvChad users!**
+# NERI — Neovim Config
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+**NERI** is my personal Neovim configuration, built on top of [NvChad](https://nvchad.com/)'s base config.
 
-# Credits
-
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+It is tailored exclusively for **TypeScript**, **Go**, and **HTML** development, with a focus on keeping the experience close to that of any normal editor while still leveraging Neovim's power.

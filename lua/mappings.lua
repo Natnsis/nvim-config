@@ -10,4 +10,3 @@ map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader><leader>", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
-

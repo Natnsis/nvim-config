@@ -1,27 +1,26 @@
 local options = {
-    formatters_by_ft = {
-        -- Lua
-        lua = { "stylua" },
+  formatters_by_ft = {
+    -- Lua
+    lua = { "stylua" },
 
-        -- JavaScript / TypeScript
-        javascript = { "prettier" },
-        typescript = { "prettier" },
-        javascriptreact = { "prettier" },
-        typescriptreact = { "prettier" },
-        json = { "prettier" },
-        html = { "prettier" },
-        css = { "prettier" },
-        scss = { "prettier" },
+    -- JavaScript / TypeScript
+    javascript = { "prettier" },
+    typescript = { "prettier" },
+    javascriptreact = { "prettier" },
+    typescriptreact = { "prettier" },
+    json = { "prettier" },
+    html = { "prettier" },
+    css = { "prettier" },
+    scss = { "prettier" },
 
-        -- Go
-        go = { "gofumpt" },
+    -- Go
+    go = { "gofumpt" },
+  },
 
-    },
-
-    format_on_save = {
-        timeout_ms = 3000,
-        lsp_fallback = true,
-    },
+  format_on_save = {
+    timeout_ms = 3000,
+    lsp_fallback = true,
+  },
 }
 
 return options
