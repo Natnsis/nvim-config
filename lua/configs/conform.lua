@@ -13,6 +13,9 @@ local options = {
     css = { "prettier" },
     scss = { "prettier" },
 
+    -- Svelte
+    svelte = { "prettier" },
+
     -- Go
     go = { "gofumpt" },
   },

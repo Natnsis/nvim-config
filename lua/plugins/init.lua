@@ -38,7 +38,7 @@ return {
   -- Emmet for HTML expansion (type h1 + Tab -> <h1></h1>)
   {
     "mattn/emmet-vim",
-    ft = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "vue" },
+    ft = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "vue", "svelte" },
     config = function()
       vim.g.user_emmet_leader_key = "<C-y>"
       vim.g.user_emmet_settings = {
@@ -61,6 +61,7 @@ return {
         "emmet-language-server",
         "html-lsp",
         "css-lsp",
+        "svelte-language-server",
         "prettier",
       },
     },
@@ -71,7 +72,7 @@ return {
     opts = function()
       local default_opts = require "nvchad.configs.treesitter"
       return vim.tbl_deep_extend("force", default_opts, {
-        ensure_installed = vim.list_extend(default_opts.ensure_installed, { "html", "css", "go" }),
+        ensure_installed = vim.list_extend(default_opts.ensure_installed, { "html", "css", "go", "svelte" }),
       })
     end,
   },
@@ -86,7 +87,7 @@ return {
         enable_rename = true,
         enable_close_on_slash = false,
       },
-      filetypes = { "html", "htm", "xml", "jsx", "tsx" },
+      filetypes = { "html", "htm", "xml", "jsx", "tsx", "svelte" },
     },
   },
 }

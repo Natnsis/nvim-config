@@ -17,6 +17,9 @@ local servers = {
   ["tailwindcss"] = {
     filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
   },
+  ["svelte"] = {
+    filetypes = { "svelte" },
+  },
 }
 
 for server, opts in pairs(servers) do
